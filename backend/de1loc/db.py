@@ -7,6 +7,8 @@ from flask import current_app, g
 from flask.cli import with_appcontext
 from .FacialClassifier.model_train import trainModel
 
+# https://flask.palletsprojects.com/en/2.0.x/tutorial/
+
 DEFAULT_CATEGORIES = ['0', '1']
 MODELDIR = 'model'
 MODEL_FILENAME = 'model'

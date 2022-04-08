@@ -187,6 +187,16 @@ $ cd test
 $ pytest
 ```
 
+## Data Collection
+
+To train our facial recognition model, it was necessary to collect images of other people to
+allow the model to detect unknown individuals. For this, we made use of an 
+[image scraping tool](https://github.com/ostrolucky/Bulk-Bing-Image-downloader).
+
+For all other photos, we took photos of ourselves. All images that were collected
+were subjected to augmentation and embedding computation that were stored in this
+repository.
+
 ## API Endpoints
 
 The endpoints are documented in the source code, but they are also here for convenicence.
