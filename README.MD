@@ -8,7 +8,12 @@ Management of unlock methods is initiated through the user app, with most inform
 Members of our group contributed as follows:
 ## Aswin
 - Performed paired programming with Harshil for the embedded system (files in `embedded_system/`)
-- Individual implementation of the Servo Avalon Interface and the Servo Control from Nios
+    - Hardware: Pinpad reader, pinpad avalon interface, servo motor controller, 
+    servo motor avalon interface, RFS daughtercard connection
+    - Embedded software: [main.c](embedded_system/software/embedded_software/main.c), 
+    [requests.h](embedded_system/software/embedded_software/requests.h), 
+    adjustments to [esp8266.c](embedded_system/software/embedded_software/esp8266.c)
+- Individual debugging and validation of servo motor controller
 
 ## Declan
 - Sole Frontend Developer, contributed all files within `UserApp/`
@@ -22,3 +27,8 @@ Members of our group contributed as follows:
 
 ## Harshil
 - Performed paired programming with Aswin for the embedded system (files in `embedded_system/`)
+    - Hardware: Pinpad reader, pinpad avalon interface, servo motor controller, 
+    servo motor avalon interface, RFS daughtercard connection
+    - Embedded software: [main.c](embedded_system/software/embedded_software/main.c), 
+    [requests.h](embedded_system/software/embedded_software/requests.h), 
+    adjustments to [esp8266.c](embedded_system/software/embedded_software/esp8266.c)
