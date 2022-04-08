@@ -1,3 +1,4 @@
+# This code was written in reference to the content of UBC's CPSC 340
 import numpy as np
 
 def bootstrap(X, y):

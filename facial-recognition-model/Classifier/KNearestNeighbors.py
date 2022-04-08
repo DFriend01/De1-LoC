@@ -1,3 +1,4 @@
+# This code was written in reference to the content of UBC's CPSC 340
 from Classifier import Classifier
 import numpy as np
 from scipy import stats

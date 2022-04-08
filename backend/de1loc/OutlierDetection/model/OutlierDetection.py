@@ -1,7 +1,6 @@
+# This Code was written with reference to the content covered in UBC's CPSC 340 Course
+
 import numpy as np
-import heapq
-
-
 
 class OutlierDetection:
     # Initial data is expected to be an nx2 numpy array, where n is the length of initial data
