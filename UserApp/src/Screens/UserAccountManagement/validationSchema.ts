@@ -6,7 +6,8 @@
 import * as Yup from 'yup';
 /* Relative Imports */
 import { ERROR } from '../../utils/errors';
-
+/* Code for Ensuring confirm password is same as password */
+/* https://sagar-shrestha.medium.com/yup-validate-if-the-values-of-two-fields-are-the-same-12c1e997920 */
 export const RegistrationSchema = Yup.object().shape({
     firstname: Yup.string().min(2, ERROR.tooShort).max(64, ERROR.tooLong).required(ERROR.required),
     lastname: Yup.string().min(2, ERROR.tooShort).max(64, ERROR.tooLong).required(ERROR.required),

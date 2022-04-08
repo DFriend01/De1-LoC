@@ -8,35 +8,24 @@
  * @format
  */
 
+/* 
+ * External Library Code:
+ * See README.MD  for link to documentation used for
+ * interacting with these components
+ */
 import React, { useEffect, useState } from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import messaging from '@react-native-firebase/messaging';
+import notifee from '@notifee/react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
+/* Relative Imports */
 import AccountManagement from './src/Screens/UserAccountManagement/AM';
 import Home from './src/Screens/Home/Home';
 import { initialUser } from './src/State/UserState/UserState';
 import getCameraPermission from './src/Async/permissions';
 import useStateCallback from './src/Components/useStateCallback';
-import messaging from '@react-native-firebase/messaging';
-import notifee from '@notifee/react-native';
+
 
 const onMessageReceived = async (message : any) => {
   const channelId = await notifee.createChannel({
