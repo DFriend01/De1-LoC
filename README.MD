@@ -10,9 +10,9 @@ Members of our group contributed as follows:
 - Performed paired programming with Harshil for the embedded system (files in `embedded_system/`)
     - Hardware: Pinpad reader, pinpad avalon interface, servo motor controller, 
     servo motor avalon interface, RFS daughtercard connection
-    - Embedded software: [main.c](embedded_system/software/embedded_software/main.c), 
-    [requests.h](embedded_system/software/embedded_software/requests.h), 
-    adjustments to [esp8266.c](embedded_system/software/embedded_software/esp8266.c)
+    - Embedded software: Coordinates the servo and pinpad from the Nios2 processor, 
+    with the backend using wifi. Original code mainly in [main.c](embedded_system/software/embedded_software/main.c), 
+    [requests.h](embedded_system/software/embedded_software/requests.h).
 - Individual debugging and validation of servo motor controller
 
 ## Declan
@@ -29,6 +29,6 @@ Members of our group contributed as follows:
 - Performed paired programming with Aswin for the embedded system (files in `embedded_system/`)
     - Hardware: Pinpad reader, pinpad avalon interface, servo motor controller, 
     servo motor avalon interface, RFS daughtercard connection
-    - Embedded software: [main.c](embedded_system/software/embedded_software/main.c), 
-    [requests.h](embedded_system/software/embedded_software/requests.h), 
-    adjustments to [esp8266.c](embedded_system/software/embedded_software/esp8266.c)
+    - Embedded software: Coordinates the servo and pinpad from the Nios2 processor, 
+    with the backend using wifi. Original code mainly in [main.c](embedded_system/software/embedded_software/main.c), 
+    [requests.h](embedded_system/software/embedded_software/requests.h).
