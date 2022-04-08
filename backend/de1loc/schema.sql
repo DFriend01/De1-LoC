@@ -1,0 +1,31 @@
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS code;
+DROP TABLE IF EXISTS log;
+
+CREATE TABLE user (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT UNIQUE NOT NULL,
+  firstname TEXT NOT NULL,
+  lastname TEXT NOT NULL,
+  password TEXT NOT NULL,
+  face_enabled BOOLEAN NOT NULL
+);
+
+CREATE TABLE code (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    code TEXT UNIQUE NOT NULL,
+    codename TEXT NOT NULL,
+    user_id INTEGER NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user (id)
+);
+
+CREATE TABLE log (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER,
+  username TEXT NOT NULL,
+  codename TEXT NOT NULL,
+  verifDate DATE NOT NULL,
+  verifTime TIME NOT NULL,
+  success BOOLEAN NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES user (id)
+);

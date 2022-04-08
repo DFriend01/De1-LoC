@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "953119328232",
+    "project_id": "de1loc",
+    "storage_bucket": "de1loc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953119328232:android:91954165f37e354892c65d",
+        "android_client_info": {
+          "package_name": "com.userapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953119328232-q75jqpfn0e32dtpeaop6rfr2b3qntjqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMqSOLUhvD3RzFqgZrdf51Kw_4JUyf8WA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953119328232-q75jqpfn0e32dtpeaop6rfr2b3qntjqj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
