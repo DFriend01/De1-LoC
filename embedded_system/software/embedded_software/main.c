@@ -52,7 +52,7 @@ static void get_req_key_isr(void *context);
  ***************************************************************************/
 int main()
 {
-  	int servo_input_unlocked = 0xff000000; // careful, the last 24 bits will be chopped off by IOWR!
+  	int servo_input_unlocked = 0xff000000; // careful, the least significant 24 bits will be chopped off by IOWR!
   	int servo_input_locked = 0x00000000;
 
   	int verification_result = 0;
@@ -64,7 +64,6 @@ int main()
 
    	verification_source_app = 0;
 	verification_source_pinpad = 0;
-   	alt_putstr("Hello world!\n");
 
    	init_get_req_key_pio();
 
@@ -88,7 +87,7 @@ int main()
 			}
 		} if (verification_source_app == 1) {
 			verification_source_app = 0;	/* reset flag that indicates necessity to send a GET
-										   	   request for unlock initiated in Android app */
+										   	   request for unlock initiated from Android app */
 			sprintf(app_req, req_app_verify, host);
 			verification_result = send_http_request(app_req);
 			if (verification_result == 200){
@@ -264,6 +263,6 @@ int send_http_request(char* req){
  */
 int parse_http_response_status(char* http_response) {
 	http_response = strstr(http_response, "HTTP/1.1 ");
-	printf("status code: %c%c%c\n", http_response[9], http_response[10], http_response[11]); // buffer[9,10,11] should be the status code returned for GET request
+	printf("status code: %c%c%c\n", http_response[9], http_response[10], http_response[11]); // http_response[9,10,11] should be the status code returned for GET request
 	return (http_response[9]- '0')*100 + (http_response[10] - '0')*10 + (http_response[11] - '0')*1;
 }
